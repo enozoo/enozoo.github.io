@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>メニューをもったWebサイト</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <style>
+            /* ページ全体に余白をつける */
+            body {background-color: lightgray;}
+            /* リストの黒丸点をなくし、paddingが0なら余計な余白除去、ありならリスト周りに背景色がはいる */
+            ul { list-style: none;margin:0px; padding:10px;}
+            /* サイドバーは★表示ページ全体の★25%の幅でコンテンツは左寄せ */
+            aside { width: 25%;float:left; background-color: blue; margin-right:0px}
+            /* asideのリスト項目はasideの幅いっぱいにする */
+            aside li{width:100%;background-color: white;}
+            /* navのliはインライン化して右間隔を１文字ぶんあける */
+            nav li{display: inline; margin-right: 0.5em;background-color: pink;}
+            /* mainは70%の幅で右寄せ、内側に少し余白を */
+            main { width: 70%;float: right; background-color: bisque;padding: 10px;}
+            /* header 色つけ */
+            header {background-color: white;}
+            /* section 色つけ */
+            section {background-color: white;}
+            /* footerはセンタリングと、内側に余白 */
+                #wrap {margin:40px auto; padding:10px 40px;}
+            body {background-color: lightgray;}
+            /* リストの黒丸点をなくし、paddingが0なら余計な余白除去、ありならリスト周りに背景色がはいる */
+            ul { list-style: none;margin:0px; padding:10px;}
+            /* サイドバーは★表示ページ全体の★25%の幅でコンテンツは左寄せ */
+            aside { width: 25%;float:left; background-color: blue; margin-right:0px}
+            /* asideのリスト項目はasideの幅いっぱいにする */
+            aside li{width:100%;background-color: white;}
+            /* navのliはインライン化して右間隔を１文字ぶんあける */
+            nav li{display: inline; margin-right: 0.5em;background-color: pink;}
+            /* mainは70%の幅で右寄せ、内側に少し余白を */
+            main { width: 70%;float: right; background-color: bisque;padding: 10px;}
+            /* header 色つけ */
+            header {background-color: white;}
+            /* section 色つけ */
+            section {background-color: white;}
+            /* footerはセンタリングと、内側に余白 */
+            footer { text-align: center; clear:both;background-color: lavender; padding: 10px;}
+              </style>
+    </head>
+    <body>
+        <div id="wrap">
+            body真下に「div id="wrap"」と、headのstyle#wrapであることを明示。<br>
+            ulでpadding:010pxにしたため、要素同士が接せず設定した背景色（asideでは青）が入ります。<br>
+            classは複数のブロックを一度に操作するとき、idは一意のブロックの操作をするとき利用。
+            id＝同じhtml内に複数同じ値を設定することができない。javaScriptの表示、非表示設定など。<br>
+            class＝同じページ内の複数のdivに対して、同じ値を設定し、複数のdivに同じ装飾することが可能。
+　　　　　　　<br>
+            <header>
+                <h1>ここはheaderで囲まれたh1です</h1>
+            </header>
+            <nav>                
+                <ul>
+                    <li>ここはnav liです</li>
+                    <li>displayをinlineで右から左</li>
+                    <li>margin-rightは0.5emです</li>
+                    <li>会社概要</li>
+                </ul>
+            </nav>
+ 
+            <main>
+                <section>
+                    <h2>ここはmain&gt;section&gt;h2です。</h2>
+                    <p>ここはp要素です。改行していません。pを閉じsectionで閉じます。</p>
+                </section>
+                <section>
+                    <h3>h3で書いてみました。</h3>
+                    <p>
+                       フォントが小さくなりましたよ。
+                    </p>
+                </section>
+                   <section>
+　　　　　　　　　　　 <p>
+                     ここはsection開始、pだけです。下寄せがデフォルトなのかな。<br> 
+                     末尾はp,section,mainの順で閉じます。 
+                    </p>
+                </section>
+            </main>
+ 
+            <aside>
+                <ul>
+                    <li>asideの背景色は青</li>
+                    <li>aside liの背景色は白</li>
+                    <li>widthは表示全体の25%</li>
+                </ul>
+            </aside>
+ 
+            <footer>
+                <small>styleでのfooter要素にてtext-align: center; clear:both　などで設定。smallで囲みます。</small>
+            </footer>
+        </div>
+    </body>
+</html>
